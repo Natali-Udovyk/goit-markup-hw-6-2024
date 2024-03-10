@@ -30,6 +30,7 @@ h1, h2, h3, p {
 }
 .container {
     /* width: 1158px; */
+    max-width: 320px;
     width: 100%;
     margin: 0 auto;
     padding: 0 16px;
@@ -138,6 +139,7 @@ span {
 }
 .addres-info {
     display: none;
+    
 }
 
 .information {
@@ -146,6 +148,7 @@ span {
 @media screen and (min-width: 768px) {
     .addres-info {
         display: flex;
+        margin-left: auto;
         /* flex-wrap: wrap;
         margin: 0 auto; */
     } 
@@ -153,8 +156,8 @@ span {
     display: flex;
     flex-wrap: wrap;
     row-gap: 12px;
-    margin-left: 122px;
-    flex-direction: row-reverse;
+    /* margin-left: 122px; */
+    flex-direction: column;
  }
  .link-address {
     font-family: "Roboto", sans-serif;
@@ -171,6 +174,8 @@ span {
         flex-wrap: nowrap;
         gap: 40px;
         margin-left: 332px;
+        flex-direction: row
+        ;
      }
      .link-address {
         font-weight: 400;
@@ -199,7 +204,7 @@ span {
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
-      ), url('../images/mobile@1.jpg');
+      ), url('../images/mobile-1x.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -210,6 +215,17 @@ span {
     min-width: 320px; */
     padding: 72px 0;
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .banner {
+        background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ), url('../images/mobile-2@2x.jpg');
+    }
+  }
 @media screen and  (min-width: 768px) {
     .banner {
         width: 100%;
@@ -220,31 +236,76 @@ span {
       ), url('../images/tablet@1x.jpg');
     }
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .banner {
+        background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ), url('../images/tablet-2@2x.jpg');
+    }
+}
 @media screen and (min-width: 1158px) {
     .banner {
         padding: 188px 0;
+        background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ), url('../images/people-office.jpg');
     }
     
 }
-@media screen and (min-resolution: 192dpi){
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+   .banner{ 
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ), url('../images/people-office@2x.jpg');
+  }}
+/* @media screen and (min-resolution: 192dpi){
     .banner {
-    background-image: url('../images/people-office.jpg');
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ), url('../images/people-office.jpg');
     }
-}
+} */
 
 .banner .container {
     text-align: center;
 }
 .banner-title {
     font-family: "Roboto", sans-serif;
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.12;
     text-align: center;
     color: #fff;
     letter-spacing: 0.02em;
     padding-bottom: 48px;
     max-width: 496px;
     margin: 0 auto;
+    text-transform: capitalize;
+}
+@media screen and (min-width: 768px) and (min-width: 1158px){
+
+    .banner-title {
+        font-family: "Roboto", sans-serif;
+        font-size: 56px;
+        line-height: 1.07;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 0.02em;
+        padding-bottom: 48px;
+        max-width: 496px;
+        margin: 0 auto;
+    }
 }
 
 .order-button {
@@ -273,6 +334,17 @@ background-color: #404bbf;
     padding: 120px 0;
 }
 @media screen and (min-width: 320px) and (max-width: 768px){
+    .banner-title {
+        font-family: "Roboto", sans-serif;
+        font-size: 56px;
+        line-height: 1.07;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 0.02em;
+        padding-bottom: 48px;
+        max-width: 496px;
+        margin: 0 auto;
+    }
     .advant-part {
         padding: 96px 0;
     }
@@ -309,6 +381,7 @@ background-color: #404bbf;
     fill: var(--color-icon);
 }
 .advantages{
+    margin-bottom: 8px;
     text-align: center;
     font-weight: 700;
     font-size: 36px;
@@ -325,6 +398,7 @@ background-color: #404bbf;
     }
 }
 @media screen and (min-width: 1158px){
+    
     .advantages {
         font-weight: 500;
         font-size: 20px;
@@ -598,7 +672,10 @@ background-color: #404bbf;
 .text-footer {
     color: #f4f4fd;
     width: 264px;
+
+    text-align: start;
 }
+
 .social-link .link-icon-footer {
     display: flex;
     justify-content: center;
@@ -637,12 +714,14 @@ margin-bottom: 16px;
 
 }
 @media screen and (min-width: 1158px) {
+  
     .social-link {
         margin-right: 80px;
     }
     
     .social-footer-link {
         margin-right: 120px;
+        margin-bottom: 0;
     }
     .icons-footer {
         justify-content: baseline;
@@ -957,7 +1036,8 @@ margin-bottom: 16px;
     
     .container-footer {
         flex-wrap: wrap;
-        margin-left: 108px;
+        max-width: 584px;
+        /* margin-left: 108px; */
         column-gap: 24px;
         text-align: start;
         justify-content:left;
@@ -977,6 +1057,7 @@ margin-bottom: 16px;
         flex-wrap: nowrap;
         flex-direction: row;
         margin-left: auto;
+        text-align: start;
     }
     .send-form {
         /* display: flex;
