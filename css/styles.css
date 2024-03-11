@@ -288,12 +288,11 @@ span {
     text-align: center;
     color: #fff;
     letter-spacing: 0.02em;
-    padding-bottom: 48px;
+    margin: 0 auto 72px;
     max-width: 496px;
-    margin: 0 auto;
     text-transform: capitalize;
 }
-@media screen and (min-width: 768px) and (min-width: 1158px){
+@media screen and (min-width: 768px) and (max-width: 1158px){
 
     .banner-title {
         font-family: "Roboto", sans-serif;
@@ -302,9 +301,9 @@ span {
         text-align: center;
         color: #fff;
         letter-spacing: 0.02em;
-        padding-bottom: 48px;
+        margin: 0 auto 48px;
         max-width: 496px;
-        margin: 0 auto;
+
     }
 }
 
@@ -333,18 +332,18 @@ background-color: #404bbf;
 .advant-part {
     padding: 120px 0;
 }
-@media screen and (min-width: 320px) and (max-width: 768px){
-    .banner-title {
-        font-family: "Roboto", sans-serif;
-        font-size: 56px;
-        line-height: 1.07;
-        text-align: center;
-        color: #fff;
-        letter-spacing: 0.02em;
-        padding-bottom: 48px;
-        max-width: 496px;
-        margin: 0 auto;
-    }
+@media screen and (min-width: 320px) and (max-width: 767px){
+    /* .banner-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    line-height: 1.12;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 0.02em;
+    margin: 48px auto;
+    max-width: 496px;
+    text-transform: capitalize;
+    } */
     .advant-part {
         padding: 96px 0;
     }
@@ -688,7 +687,8 @@ background-color: #404bbf;
 
 }
 .social-link {
-    margin-bottom: 72px;
+    
+    /* margin-bottom: 72px; */
 }
 .social-link .link-icon-footer:hover,
 .social-link .link-icon-footer:focus {
@@ -703,9 +703,9 @@ color: #fff;
 margin-bottom: 16px;
 }
 
-.social-footer-link {
+/* .social-footer-link {
     margin-bottom: 72px;
-}
+} */
 .icons-footer {
     gap: 16px;
     display: flex;
@@ -748,8 +748,8 @@ margin-bottom: 16px;
 
 }
 .modal {
-    width: 288px;
-    /* height: 623px; */
+    width: 100%;
+   max-width: 408px;
 
         transform: translate(-50%, -50%) scale(1); 
         padding: 72px 24px 24px 24px;
@@ -1031,6 +1031,7 @@ margin-bottom: 16px;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    row-gap: 72px;
 }
 @media screen and (min-width: 768px) and (max-width: 1157px) {
     
@@ -1159,6 +1160,7 @@ gap: 35px;
     display: flex;
     flex-wrap: wrap;
     row-gap: 24px;
+    flex-direction: column;
 }
 .link-address-menu {
 font-weight: 500;
